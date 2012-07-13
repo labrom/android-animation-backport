@@ -844,7 +844,7 @@ public class PropertyValuesHolder implements Cloneable {
                 }
                 if (mJniSetter == 0) {
                     String methodName = getMethodName("set", mPropertyName);
-                    mJniSetter = nGetIntMethod(targetClass, methodName);
+                    mJniSetter = 0; //nGetIntMethod(targetClass, methodName);
                     if (mJniSetter != 0) {
                         if (propertyMap == null) {
                             propertyMap = new HashMap<String, Integer>();
